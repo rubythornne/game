@@ -1,10 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Adventure Game</title>
+  <link rel="stylesheet" href="game/styles/stylesheet.css">
+</head>
+    `<body>
+       <embed src="8bit.mp3" autostart="true" loop="true" hidden="true">  
+        <script>                 
+        var maxX = 2;
+        var maxY = 2;
+        var userX = 0;
+        var userY = 0;
+        var treasureX = 2;
+        var treasureY = 1;
+        var treasureFound = false;
+        var name = prompt("Welcome brave adventurer! What are you called?")
+while(!treasureFound){
+        var direction = prompt("Which direction would you like to go in? (north, south, east, west)")
+        console.log(direction)
+}
+        var newX;
+        var newY;
+if(direction == "north"){
+        newX = userX;
+        newY = userY + 1;
+}
+if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY){
+        userX = newX;
+        userY = newY;
+}else {
+        console.log("There is a forbidding mountain range in that direction, you cannot go") 
+}
+if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY){
+        userX = newX;
+        userY = newY;
+}else {
+        console.log("There is a forbidding mountain range in that direction, you cannot go") 
+}
+if(direction == "north"){
+    newX = userX;
+    newY = userY + 1;
+    // neither value < 0, neither is > max
+if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY){
+      userX = newX;
+      userY = newY;
+}else {
+     console.log("There is a forbidding mountain range in that direction, you cannot go") 
+    }
+}else if(direction == "east"){
+    newX = userX + 1;
+    newY = userY;
+    // neither value < 0, neither is > max
+if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY){
+      userX = newX;
+      userY = newY;
+}else {
+     console.log("There is a forbidding mountain range in that direction, you cannot go") 
+    }
+}else if(direction == "south"){
+    newX = userX;
+    newY = userY - 1;
+    // neither value < 0, neither is > max
+if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY){
+      userX = newX; 
+      userY = newY;
+}else {
+     console.log("There is a forbidding mountain range in that direction, you cannot go") 
+    }
+}else if(direction == "west"){
+    newX = userX - 1;
+    newY = userY;
+    // neither value < 0, neither is > max
+if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY){
+      userX = newX;
+      userY = newY;
+}else {
+     console.log("There is a forbidding mountain range in that direction, you cannot go") 
+    }
     
-    <head>
-        <meta charset="utf-8">
-     <body>
-        
-        
-    </body>
+}else {
+   console.log("please enter a real direction") 
+}    
+if(newX >= 0 && newY >= 0 && newX <= maxX && newY <= maxY){
+        userX = newX;
+        userY = newY;
+}
+else {
+        console.log("There is a forbidding mountain range in that direction, you cannot go") 
+}  
+        console.log("The user's x is: " + userX)
+        console.log("The user's y is: " + userY)
+if(userX == treasureX && userY == treasureY){
+        console.log("Hooray! You found the treasure!")
+        treasureFound = true;
+}
+       </script>  
+    </body>                
 </html>
